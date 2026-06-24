@@ -74,13 +74,7 @@ body {
 .right-panel,
 .fold {
   height: 190px;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,0.025) 0px,
-      transparent 1px
-    ),
-    #f8f4eb;
+  background: #f5f5f5;
   background-size: 56px 100%;
   border: 1px solid #d8d0c1;
 }
@@ -101,9 +95,9 @@ body {
   z-index: 10;
 
   box-shadow:
-    10px 0 18px rgba(0,0,0,.09),
-    0 14px 22px rgba(0,0,0,.10),
-    inset -8px 0 14px rgba(0,0,0,.04);
+    10px 0 18px rgba(0, 0, 0, .09),
+    0 14px 22px rgba(0, 0, 0, .10),
+    inset -8px 0 14px rgba(0, 0, 0, .04);
 }
 
 /* 가운데 접힌 종이 */
@@ -122,9 +116,9 @@ body {
   transform-style: preserve-3d;
 
   box-shadow:
-    inset 6px 0 10px rgba(0,0,0,.06),
-    inset -6px 0 10px rgba(0,0,0,.04),
-    0 10px 18px rgba(0,0,0,.05);
+    inset 6px 0 10px rgba(0, 0, 0, .06),
+    inset -6px 0 10px rgba(0, 0, 0, .04),
+    0 10px 18px rgba(0, 0, 0, .05);
 }
 
 .middle-panel::before {
@@ -137,11 +131,9 @@ body {
   height: 100%;
 
   background:
-    linear-gradient(
-      90deg,
-      rgba(0,0,0,.25),
-      rgba(255,255,255,.15)
-    );
+    linear-gradient(90deg,
+      rgba(0, 0, 0, .25),
+      rgba(255, 255, 255, .15));
 
   z-index: 20;
 }
@@ -164,14 +156,17 @@ body {
   justify-content: center;
   align-items: center;
 
-  font-size: 92px;
-  font-weight: 800;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 125px;
+  font-weight: 400;
+  letter-spacing: -2px;
   color: #9f1d1d;
   white-space: nowrap;
 
   opacity: 0;
   z-index: 2;
 }
+
 
 /* 접힌 종이 */
 .fold {
@@ -194,8 +189,8 @@ body {
   transform-origin: left center;
 
   box-shadow:
-    inset -24px 0 32px rgba(0,0,0,.22),
-    12px 0 18px rgba(0,0,0,.10);
+    inset -24px 0 32px rgba(0, 0, 0, .22),
+    12px 0 18px rgba(0, 0, 0, .10);
 }
 
 .fold-right {
@@ -203,8 +198,8 @@ body {
   transform-origin: right center;
 
   box-shadow:
-    inset 24px 0 32px rgba(0,0,0,.20),
-    -12px 0 18px rgba(0,0,0,.10);
+    inset 24px 0 32px rgba(0, 0, 0, .20),
+    -12px 0 18px rgba(0, 0, 0, .10);
 }
 
 /* 오른쪽 접힌 종이 */
@@ -220,7 +215,7 @@ body {
   cursor: grab;
   user-select: none;
 
-  transition: left 0.28s cubic-bezier(.2,.9,.2,1);
+  transition: left 0.28s cubic-bezier(.2, .9, .2, 1);
 }
 
 #slideGroup:active {
@@ -239,9 +234,9 @@ body {
   font-weight: 800;
 
   box-shadow:
-    -6px 0 12px rgba(0,0,0,.08),
-    0 12px 18px rgba(0,0,0,.08),
-    inset 5px 0 10px rgba(255,255,255,.35);
+    -6px 0 12px rgba(0, 0, 0, .08),
+    0 12px 18px rgba(0, 0, 0, .08),
+    inset 5px 0 10px rgba(255, 255, 255, .35);
 }
 
 .right-panel::after {
@@ -257,12 +252,13 @@ body {
   background: #e7dfd1;
   transform: skewY(7deg);
 
-  box-shadow: 8px 8px 12px rgba(0,0,0,.08);
+  box-shadow: 8px 8px 12px rgba(0, 0, 0, .08);
   z-index: -1;
 }
 
 /* 힌트 애니메이션 */
 @keyframes hint {
+
   0%,
   80%,
   100% {
@@ -276,4 +272,22 @@ body {
 
 #slideGroup.hint {
   animation: hint 4s infinite;
+}
+
+.handword {
+  display: block;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.mian-img {
+  width: 270px;
+}
+
+.hadago-img {
+  width: 330px;
+}
+
+.hae-img {
+  width: 125px;
 }
